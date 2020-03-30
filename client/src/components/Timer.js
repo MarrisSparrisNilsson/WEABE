@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, createRef } from 'react'
 import arrow from '../images/icons/long-arrow-alt-right-solid.svg'
 
 const Timer = () => {
+    const progressBar = createRef()
     
     const [timer, setTimer] = useState(0)
     const [timeSchedule, setTimeSchedule] = useState({
@@ -13,7 +14,7 @@ const Timer = () => {
     useEffect(() => {
         setTimeout(() => {
             const time = new Date().toLocaleTimeString()
-            setTimer(time)   
+            setTimer(time)
         }, 1000);
     }, [timer]);
     
@@ -22,7 +23,7 @@ const Timer = () => {
             <i></i>
             <span className="current timer">{timer}</span>
             <div className="timeSection">
-                <div className="time-progress"></div>
+                <div className="time-progress" ref={progressBar}></div>
                 <span className="start timer">{timeSchedule.startTime}</span>
                 <img src={arrow} className="arrow-icon" alt="Arrow"/>
                 <span className="lunch timer">{timeSchedule.lunchTime}</span>
