@@ -68,19 +68,15 @@ h3{
     align-items: center;
 }
 
-.overflow{
+.timeSection{
     background-color: white;
-    overflow-y: hidden;
+
+    width: 600px;
+    height: 80px;
+    /* padding: 5px; */
+
     border-radius: 5px;
     border: 2px solid black;
-
-    /* z-index: 10; */
-}
-
-.timeSection{
-    width: 100%;
-    /* padding: 5px; */
-    height: 80px;
 
 
     overflow: hidden;
@@ -92,13 +88,21 @@ h3{
     /* z-index: 2; */
 }
 
-.timeSection-slider{
+.time-progress{
     position: absolute;
     background-color: rgba(0, 128, 0, 0.5);
-    width: 100px;
-    height: 10%;
+    width: 10px;
+    /* width: 100%; */
+    max-width: 596px;
+    /* height: 10%; */
+    height: 77px;
     /* height: 64px; */
     /* z-index: 2; */
+}
+
+.arrow-icon{
+    width: 30px;
+    z-index: 10;
 }
 
 .timer{
